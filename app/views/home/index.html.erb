@@ -1,0 +1,176 @@
+<html>
+	<head>
+		<title> Matchy </title>
+		<style>
+			body
+			{
+				font-family: "Lucida Console";
+
+			}
+
+			#brief
+			{
+				padding: 50px;
+				height: 600px;
+				margin-bottom: 160px;
+			}
+			#step
+			{
+				background-image: url(<%= asset_path 'step.jpg' %>);
+				color:white;
+				height: 700px;
+			}
+			#column
+			{
+				padding:100px;
+			}
+			#column > h3
+			{
+				padding-bottom: 60px;
+				margin-bottom: 30px;
+				text-align: left;
+			}
+			#column > h2
+			{
+				padding-bottom: 60px;
+				margin-bottom: 30px;
+			}
+
+			#column > p
+			{
+				font-size: 16px;
+			}
+			#why
+			{
+				margin: 50px;
+				text-align: center;
+				padding: 30px;
+			}
+			#why > h2
+			{
+				
+			}
+			#border
+			{
+				margin-top: px;
+				padding: 20px;
+			}
+
+			.jumbotron
+			{
+				background-image: url(<%= asset_path 'work.jpg' %>);
+
+				height: 700px;
+			}
+
+			#text
+			{
+				text-align: center;
+				padding-top: 250px;
+				color: white;
+				font-size: 16px;
+				letter-spacing: 1.5;
+				line-height: 1.5;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<% if !flash[:notice].blank? %>
+		   <div class = "alert alert-info">
+		      <%= flash[:notice] %>
+		   </div>
+		<% end %>
+		<div class="row">
+
+		</div>
+
+		<div class="jumbotron" id="text">
+		  	 <p>GET YOUR RESUME IN FRONT OF HUNDRED THOUSANDS HIRING MANAGERS NOW WITH ONE CLICK</p>
+			  <br>
+			  <p>UPLOAD YOUR RESUME HERE </p>
+			  <button class="btn btn-default btn-large" style="height:100px; width:300px;" type="submit"><%= link_to 'Upload Resume', new_resume_path, style: 'color:blue; font-size:24px;' %></button>
+		</div>
+
+		<div class="row" id="brief">
+			<h2 style="margin-top:120px; text-align:center;"> WHAT IS MATCHY? </h2>
+			<div class="col-md-6" id="column">
+				<p style="border-bottom:solid; border-color: blue;"></p>
+				<h2>Instant match with hundreds of thousand of companies from our database</h2>
+				<p> All you have to do just upload your resume and let us work the rest. <br>The service is totally free and will save your time. </p>
+			</div>
+			<div class="col-md-6" id="column">
+				<p style="border-bottom:solid; border-color: blue;"></p>
+				<h2>How does Matchy find you the job without you do anything?</h2>
+				<p> We use machine-learning algorithms to match your resume with the potential employer while you did nothing. </p>
+			</div>
+		</div>
+
+		<div id="outer step">
+			<div class="row" id="step">
+				<h2 style="margin-top:120px; text-align:center;"> HOW DOES MATCHY WORK? </h2>
+				<div class="col-md-4" id="column">
+					
+					<div id="border" style="border-left:3px solid yellow; ">
+
+					<h3 > Submit Resume </h3>
+					<br>
+					<br>
+					<p>	
+						Prepare your resume and submit it to <b>Matchy</b>. 
+						<br><br>
+						Do nothing and let us match you with the potential employers.
+					</p>
+
+					</div>
+				</div>
+				<div class="col-md-4" id="column">
+					<%= image_tag '' %>
+					<div id="border" style="border-left:3px solid orange;">
+
+					<h3> Interview Prep </h3>
+					<br>
+					<br>
+					<p>
+						Make sure to do some interview practices before<br> meet with potential employers.
+					</p>
+					<br>
+					<br>
+					</div>
+				</div>
+				<div class="col-md-4" id="column">	
+					<%= image_tag '' %>
+					<div id="border" style="border-left:3px solid red; ">
+
+					<h3> Get A Job </h3>
+					<br>
+					<br>
+
+					<p> Start your work and earn the money. </p>
+					<br>
+					<br>
+					<br>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="why">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+				<h2> WHY USE MATCHY? </h2>
+				<p style="border-bottom:solid; border-color: red;"></p>
+				<br>
+				<br>
+				<p>
+				Remember those times where you have to apply to many companies to get a job? <br><br>
+				With Matchy, you just need to focus on your resume and submit it once.<br><br> We will make sure your resume get into all of our companies doors with only <b>ONE CLICK</b>.<p>
+				</div>
+				<button class="btn btn-default btn-large" style="height:100px; width:300px;" type="submit"><%= link_to 'Upload Resume', new_resume_path, style: 'color:blue; font-size:24px;' %></button>
+			</div>
+		</div>
+
+	</body>
+</html>

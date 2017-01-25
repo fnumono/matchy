@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+
+  </title>
+
+  <style>
+    #box
+    {
+      
+    }
+    h1
+    {
+    font-size: 36px;
+      /*background: -webkit-linear-gradient(#eee, orange);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;*/
+
+     
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="row">
+
+  </div>
+
+  <div class="row">
+    <br>
+    <br>
+    <div class="col-xs-6 col-xs-offset-3">
+      <h1 style="text-align:center">
+        WELCOME BACK
+      </h1>
+      <br>
+
+    </div>
+  </div>
+
+
+  <div id="box">
+
+
+  <div class="col-xs-6 col-xs-offset-3">
+      <h2 style="text-align:center">
+        Login
+      </h2>
+      <br>
+
+    </div>
+  </div>
+  
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="row">
+    <br>
+    <br>
+    <div class="col-xs-2 col-xs-offset-3">
+        <%= f.label :email %>
+    </div>
+    <div class="col-xs-4">
+        <%= f.email_field :email, autofocus: true, :size => 50 %>
+    </div>
+  </div>
+   
+   <br>
+
+    <div class="row">
+    <div class="col-xs-2 col-xs-offset-3">
+        <%= f.label :password%>
+    </div>
+
+    <div class="col-xs-4">
+        <%= f.password_field :password, :size => 50, autocomplete: false%>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-5">
+    <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+      </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-5">
+    <div class="actions">
+      <%= f.submit "Log in" %>
+    </div>
+   </div>
+  </div>
+  <% end %>
+
+  <br>
+
+  <div class="row">
+  <div class="col-xs-6 col-xs-offset-5">
+    <%= render "devise/shared/links" %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+  </div>
+
+</div>
+
+</body>
+
+</html>
